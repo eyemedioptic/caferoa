@@ -1,5 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://caferoa.com/</loc><lastmod>2026-11-16</lastmod><priority>1.0</priority></url>
-  <url><loc>https://caferoa.com/tin-thi-truong.html</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://caferoa.com/</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image><image:loc>https://caferoa.com/img/logo-r-header.webp</image:loc><image:title>CAFEROA Premium Coffee</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/hb-wood-cup.webp</image:loc><image:title>Cà phê hạt rang thuần mộc CAFEROA</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/hb-bag-roasted-beans.webp</image:loc><image:title>Túi cà phê CAFEROA Signature Roasted Beans</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/hb-milk-coffee.webp</image:loc><image:title>Cà phê sữa pha phin cho quán và văn phòng</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/hb-bag-specialty-robusta.webp</image:loc><image:title>Cà phê Robusta giá sỉ CAFEROA</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/hb-bag-gold-reserve.webp</image:loc><image:title>Cà phê Arabica giá sỉ CAFEROA</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/hb-cherries.webp</image:loc><image:title>Cà phê chín đỏ hái từ nông trại Tây Nguyên</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/hb-bag-premium.webp</image:loc><image:title>Quà tặng cà phê hạt cao cấp</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/n-bag-premium.webp</image:loc><image:title>Xưởng rang cà phê sạch</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/logo-r-footer.webp</image:loc><image:title>CAFEROA Premium Coffee - elevate every moment</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/es-bolaven-1.webp</image:loc><image:title>Đồi cà phê trên cao nguyên Bolaven</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/es-cherries.webp</image:loc><image:title>Cành cà phê chín đỏ vùng Bolaven</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/es-bolaven-2.webp</image:loc><image:title>Thung lũng trồng cà phê Bolaven</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/es-roaster.webp</image:loc><image:title>Kiểm tra hương hạt cà phê sau khi rang</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/es-roasting.webp</image:loc><image:title>Hạt cà phê ra lò rang</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/sr-picking-hand.webp</image:loc><image:title>Hái tay từng quả cà phê chín đỏ</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/sr-picking-group.webp</image:loc><image:title>Người dân vùng cao thu hái cà phê</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/sr-picking-basket.webp</image:loc><image:title>Thu hoạch cà phê chín vào giỏ tre</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/sr-cherries-hands.webp</image:loc><image:title>Lựa chọn quả cà phê chín</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/sr-drying.webp</image:loc><image:title>Phơi cà phê trên giàn lưới</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/sr-roast-level.webp</image:loc><image:title>Mức rang medium-dark của Signature</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/sr-brewing.webp</image:loc><image:title>Pha cà phê truyền thống</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/gr-farm-row.webp</image:loc><image:title>Vườn Arabica trên đất đỏ Lâm Đồng</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/gr-picking.webp</image:loc><image:title>Thu hái Arabica chín đỏ</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/gr-basket.webp</image:loc><image:title>Giỏ quả cà phê chín hái tay</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/gr-hands.webp</image:loc><image:title>Quả Arabica chín mọng</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/gr-drying.webp</image:loc><image:title>Phơi cà phê dưới nắng cao nguyên</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/gr-cup.webp</image:loc><image:title>Tách Arabica thơm nóng</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/pt-cherries.webp</image:loc><image:title>Chùm Robusta chín đỏ</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/pt-cherries-2.webp</image:loc><image:title>Robusta Đắk Lắk vào mùa thu hoạch</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/pt-farm.webp</image:loc><image:title>Đồi cà phê Buôn Ma Thuột</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/pt-ground.webp</image:loc><image:title>Cà phê hạt và cà phê xay pha phin</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/pt-phin.webp</image:loc><image:title>Pha phin truyền thống</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/rb-hills.webp</image:loc><image:title>Triền đồi cà phê Bảo Lộc</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/rb-flowers.webp</image:loc><image:title>Mùa hoa cà phê trên đất đỏ bazan</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/rb-cherries.webp</image:loc><image:title>Chùm Robusta chín đỏ mọng</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/rb-beans.webp</image:loc><image:title>Hạt Specialty Robusta rang medium</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/rb-pourover.webp</image:loc><image:title>Pha pour-over giữa phố núi</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/pb-dilinh.webp</image:loc><image:title>Đồi cà phê bạt ngàn Di Linh, Lâm Đồng</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/pb-picking.webp</image:loc><image:title>Nông dân Di Linh thu hái cà phê</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/pb-cherries.webp</image:loc><image:title>Chùm Robusta sẻ chín đỏ</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/pb-picker.webp</image:loc><image:title>Hái cà phê trên đất đỏ bazan</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/pb-drying.webp</image:loc><image:title>Kiểm tra cà phê phơi trong nhà kính</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/pb-cup.webp</image:loc><image:title>Ly cà phê bên đồi chè lúc hoàng hôn</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/pp-espresso-signature.webp</image:loc><image:title>Cà phê Espresso Signature</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/pp-roasted-beans.webp</image:loc><image:title>Cà phê Signature Roasted Beans</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/pp-gold-reserve.webp</image:loc><image:title>Cà phê Gold Reserve</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/pp-phin-truyen-thong.webp</image:loc><image:title>Cà phê Phin Truyền Thống</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/pp-specialty-robusta.webp</image:loc><image:title>Cà phê Specialty Robusta</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/pp-phin-blend.webp</image:loc><image:title>Cà phê Phin Blend</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://caferoa.com/tin-thi-truong.html</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+    <image:image><image:loc>https://caferoa.com/img/logo-r-header.webp</image:loc><image:title>CAFEROA Premium Coffee</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/logo-r-footer.webp</image:loc><image:title>CAFEROA Premium Coffee - elevate every moment</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/es-bolaven-1.webp</image:loc><image:title>Đồi cà phê trên cao nguyên Bolaven</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/es-cherries.webp</image:loc><image:title>Cành cà phê chín đỏ vùng Bolaven</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/es-bolaven-2.webp</image:loc><image:title>Thung lũng trồng cà phê Bolaven</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/es-roaster.webp</image:loc><image:title>Kiểm tra hương hạt cà phê sau khi rang</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/es-roasting.webp</image:loc><image:title>Hạt cà phê ra lò rang</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/sr-picking-hand.webp</image:loc><image:title>Hái tay từng quả cà phê chín đỏ</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/sr-picking-group.webp</image:loc><image:title>Người dân vùng cao thu hái cà phê</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/sr-picking-basket.webp</image:loc><image:title>Thu hoạch cà phê chín vào giỏ tre</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/sr-cherries-hands.webp</image:loc><image:title>Lựa chọn quả cà phê chín</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/sr-drying.webp</image:loc><image:title>Phơi cà phê trên giàn lưới</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/sr-roast-level.webp</image:loc><image:title>Mức rang medium-dark của Signature</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/sr-brewing.webp</image:loc><image:title>Pha cà phê truyền thống</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/gr-farm-row.webp</image:loc><image:title>Vườn Arabica trên đất đỏ Lâm Đồng</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/gr-picking.webp</image:loc><image:title>Thu hái Arabica chín đỏ</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/gr-basket.webp</image:loc><image:title>Giỏ quả cà phê chín hái tay</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/gr-hands.webp</image:loc><image:title>Quả Arabica chín mọng</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/gr-drying.webp</image:loc><image:title>Phơi cà phê dưới nắng cao nguyên</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/gr-cup.webp</image:loc><image:title>Tách Arabica thơm nóng</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/pt-cherries.webp</image:loc><image:title>Chùm Robusta chín đỏ</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/pt-cherries-2.webp</image:loc><image:title>Robusta Đắk Lắk vào mùa thu hoạch</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/pt-farm.webp</image:loc><image:title>Đồi cà phê Buôn Ma Thuột</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/pt-ground.webp</image:loc><image:title>Cà phê hạt và cà phê xay pha phin</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/pt-phin.webp</image:loc><image:title>Pha phin truyền thống</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/rb-hills.webp</image:loc><image:title>Triền đồi cà phê Bảo Lộc</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/rb-flowers.webp</image:loc><image:title>Mùa hoa cà phê trên đất đỏ bazan</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/rb-cherries.webp</image:loc><image:title>Chùm Robusta chín đỏ mọng</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/rb-beans.webp</image:loc><image:title>Hạt Specialty Robusta rang medium</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/rb-pourover.webp</image:loc><image:title>Pha pour-over giữa phố núi</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/pb-dilinh.webp</image:loc><image:title>Đồi cà phê bạt ngàn Di Linh, Lâm Đồng</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/pb-picking.webp</image:loc><image:title>Nông dân Di Linh thu hái cà phê</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/pb-cherries.webp</image:loc><image:title>Chùm Robusta sẻ chín đỏ</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/pb-picker.webp</image:loc><image:title>Hái cà phê trên đất đỏ bazan</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/pb-drying.webp</image:loc><image:title>Kiểm tra cà phê phơi trong nhà kính</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/pb-cup.webp</image:loc><image:title>Ly cà phê bên đồi chè lúc hoàng hôn</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/pp-espresso-signature.webp</image:loc><image:title>Cà phê Espresso Signature</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/pp-roasted-beans.webp</image:loc><image:title>Cà phê Signature Roasted Beans</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/pp-gold-reserve.webp</image:loc><image:title>Cà phê Gold Reserve</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/pp-phin-truyen-thong.webp</image:loc><image:title>Cà phê Phin Truyền Thống</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/pp-specialty-robusta.webp</image:loc><image:title>Cà phê Specialty Robusta</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/pp-phin-blend.webp</image:loc><image:title>Cà phê Phin Blend</image:title></image:image>
+  </url>
 </urlset>

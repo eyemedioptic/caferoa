@@ -1,3 +1,10 @@
+# robots.txt – CAFEROA Premium Coffee (https://caferoa.com)
 User-agent: *
 Allow: /
+Disallow: /404.html
+
+# Cho phép Google lấy ảnh sản phẩm
+User-agent: Googlebot-Image
+Allow: /img/
+
 Sitemap: https://caferoa.com/sitemap.xml
