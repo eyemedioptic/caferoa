@@ -770,6 +770,7 @@ footer .copy{border-top:1px solid rgba(216,173,95,.18);margin-top:40px;padding-t
     <div class="news-tabs" id="newsTabs" style="display:none">
       <button class="chip active" data-cat="all">Tất cả</button>
       <button class="chip" data-cat="market">Giá & thị trường</button>
+      <button class="chip" data-cat="kienthuc">Kiến thức</button>
       <button class="chip" data-cat="quan">Cho chủ quán</button>
       <button class="chip" data-cat="tubat">Tin Tubat</button>
     </div>
@@ -1140,6 +1141,9 @@ const IMGS = {
   espresso_machine:'img/n-espresso-machine.webp'
 };
 const NEWS = [
+  {cat:'kienthuc', date:'16/11/2026', title:'Các mức độ rang cà phê: nhiệt độ, màu hạt và hương vị',
+   sum:'Light, Medium, Dark roast khác nhau thế nào? Crack 1 – crack 2, nhiệt độ từng mốc và cách chọn mức rang cho phin, espresso, pour-over.',
+   img:'img/rang-8-muc.webp', page:'muc-do-rang-ca-phe.html'},
   {cat:'market', date:'13/11/2026', title:'Giá cà phê hôm nay 13/11: nội địa 83.700đ/kg, giảm nhẹ 400đ',
    sum:'Giá nhân trong nước lùi 0,48%; Robusta London quanh 3.260 USD/tấn, Arabica New York xuống 269 cent/lb.',
    img:IMGS.wood_cup,
@@ -1493,7 +1497,7 @@ function renderChart(){
   tip.textContent = `${s.label} · ${last[0]}: ${s.fmt(last[1])} ${s.unit}`;
   $('#chart').querySelectorAll('.pt').forEach(el => { const show = () => { const p = pts[+el.dataset.i]; tip.textContent = `${s.label} · ${p[0]}: ${s.fmt(p[1])} ${s.unit}`; }; el.addEventListener('mouseenter', show); el.addEventListener('click', show); });
 }
-const CATS = {market:'Giá & thị trường', quan:'Cho chủ quán', tubat:'Tin Tubat'};
+const CATS = {kienthuc:'Kiến thức cà phê', market:'Giá & thị trường', quan:'Cho chủ quán', tubat:'Tin Tubat'};
 let newsCat = 'all';
 function goTo(id){ if(document.getElementById(id)) location.hash = id; else location.href = './#' + id; }
 const PAGE = document.body.dataset.page || 'home';
@@ -1506,6 +1510,7 @@ function renderNews(){
 }
 document.querySelectorAll('#newsTabs .chip').forEach(b => b.onclick = () => { newsCat = b.dataset.cat; document.querySelectorAll('#newsTabs .chip').forEach(x=>x.classList.toggle('active', x===b)); renderNews(); });
 function openNews(i){
+  if(NEWS[i].page){ location.href = NEWS[i].page; return; }
   const n = NEWS[i];
   $('#modalBox').innerHTML = `<button class="close" onclick="closeAll()">×</button><div class="article"><div class="eyebrow">${CATS[n.cat]} · ${n.date}</div><h3>${n.title}</h3>${n.img?`<img src="${n.img}" ${n.fb?`data-fb="${n.fb}"`:''} alt="${esc(n.title)}" referrerpolicy="no-referrer" onerror="imgFallback(this)" style="border-radius:12px;margin-bottom:16px;max-height:360px;width:100%;object-fit:cover">`:''}${n.body}<div class="src">Nguồn: <a href="${n.url}" target="_blank" rel="noopener">${n.src}</a>. Nội dung được tóm tắt lại.</div></div>`;
   openModal();

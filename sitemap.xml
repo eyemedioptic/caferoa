@@ -104,4 +104,15 @@
     <image:image><image:loc>https://caferoa.com/img/pp-specialty-robusta.webp</image:loc><image:title>Cà phê Specialty Robusta</image:title></image:image>
     <image:image><image:loc>https://caferoa.com/img/pp-phin-blend.webp</image:loc><image:title>Cà phê Phin Blend</image:title></image:image>
   </url>
+  <url>
+    <loc>https://caferoa.com/muc-do-rang-ca-phe.html</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image><image:loc>https://caferoa.com/img/rang-8-muc.webp</image:loc><image:title>Hạt cà phê ở 8 mức độ rang</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/rang-giai-doan.webp</image:loc><image:title>Màu hạt cà phê qua từng giai đoạn rang</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/rang-thang-mau.webp</image:loc><image:title>Thang màu rang cà phê theo nhiệt độ</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/rang-nan-quat.webp</image:loc><image:title>Hạt cà phê từ nhân xanh đến rang đậm</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/logo-r-header.webp</image:loc><image:title>CAFEROA Premium Coffee</image:title></image:image>
+  </url>
 </urlset>
