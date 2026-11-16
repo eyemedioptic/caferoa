@@ -55,6 +55,9 @@
     <image:image><image:loc>https://caferoa.com/img/pp-phin-truyen-thong.webp</image:loc><image:title>Cà phê Phin Truyền Thống</image:title></image:image>
     <image:image><image:loc>https://caferoa.com/img/pp-specialty-robusta.webp</image:loc><image:title>Cà phê Specialty Robusta</image:title></image:image>
     <image:image><image:loc>https://caferoa.com/img/pp-phin-blend.webp</image:loc><image:title>Cà phê Phin Blend</image:title></image:image>
+      <image:image><image:loc>https://caferoa.com/img/nq-express.webp</image:loc><image:title>Mô hình nhượng quyền CAFEROA EXPRESS</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/nq-standard.webp</image:loc><image:title>Mô hình nhượng quyền CAFEROA STANDARD</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/nq-premium.webp</image:loc><image:title>Mô hình nhượng quyền CAFEROA PREMIUM</image:title></image:image>
   </url>
   <url>
     <loc>https://caferoa.com/tin-thi-truong.html</loc>

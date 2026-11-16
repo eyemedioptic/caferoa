@@ -353,6 +353,29 @@ footer .copy{border-top:1px solid rgba(216,173,95,.18);margin-top:40px;padding-t
 .qr-info span{color:var(--muted);min-width:92px}
 .qr-info button{font-size:.72rem;border:1px solid var(--crema);color:var(--bean);border-radius:999px;padding:.1rem .5rem}
 .qr-note{font-size:.8rem;color:var(--muted);margin-top:8px}
+/* Franchise packages */
+.packs{background:var(--espresso);color:#efe4d2}
+.packs h2.section-title{color:#fff}.packs .section-head p{color:#bfae96}
+.pk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:stretch}
+.pk{background:#fff;color:var(--ink);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;transition:.25s;border:1px solid rgba(216,173,95,.25)}
+.pk:hover{transform:translateY(-6px);box-shadow:0 24px 40px rgba(0,0,0,.35)}
+.pk-img{position:relative;aspect-ratio:4/3;overflow:hidden;background:#2a1a10}
+.pk-img img{width:100%;height:100%;object-fit:cover;transition:.6s}
+.pk:hover .pk-img img{transform:scale(1.05)}
+.pk-badge{position:absolute;top:12px;left:12px;background:var(--espresso);color:var(--gold);font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:.3rem .75rem;border-radius:999px}
+.pk-express .pk-img img{object-position:50% 0%}
+.pk-standard .pk-badge{background:var(--crema);color:#fff}
+.pk-body{padding:22px 22px 24px;display:flex;flex-direction:column;flex:1;position:relative}
+.pk-no{position:absolute;right:20px;top:14px;font-family:'Playfair Display',serif;font-size:2.4rem;color:var(--paper-2);line-height:1}
+.pk h3{font-family:'Playfair Display',serif;font-size:1.45rem;color:var(--roast);letter-spacing:.02em}
+.pk-sub{color:var(--crema);font-weight:600;font-size:.9rem;margin:.2rem 0 .9rem}
+.pk ul{list-style:none;margin:0 0 18px;display:grid;gap:9px;flex:1}
+.pk li{position:relative;padding-left:26px;font-size:.93rem;line-height:1.5}
+.pk li::before{content:"✓";position:absolute;left:0;top:1px;width:18px;height:18px;border-radius:50%;background:var(--ok);color:#fff;font-size:.68rem;font-weight:700;display:grid;place-items:center}
+.pk-btn{width:100%;text-align:center}
+.pk-premium{border-color:var(--gold)}
+.pk-premium .pk-body{background:linear-gradient(180deg,#fffaf1,#fff)}
+@media (max-width:980px){.pk-grid{grid-template-columns:1fr;max-width:520px;margin:0 auto}}
 /* Overlay / drawers / modal */
 .overlay{position:fixed;inset:0;background:rgba(20,12,8,.55);opacity:0;pointer-events:none;transition:.25s;z-index:80}
 .overlay.show{opacity:1;pointer-events:auto}
@@ -573,7 +596,7 @@ footer .copy{border-top:1px solid rgba(216,173,95,.18);margin-top:40px;padding-t
       </div>
       <a href="#bang-gia">Giá bán lẻ</a>
       <a href="#gia-si">Giá sỉ cho quán</a>
-      <a href="#nhuong-quyen">Nhượng quyền</a>
+      <a href="#mo-hinh-nhuong-quyen">Nhượng quyền</a>
       <a href="tin-thi-truong.html">Tin thị trường</a>
       <a href="#lien-he">Liên hệ</a>
     </nav>
@@ -847,6 +870,50 @@ footer .copy{border-top:1px solid rgba(216,173,95,.18);margin-top:40px;padding-t
   </div>
 </section>
 
+<!-- FRANCHISE PACKAGES -->
+<section class="section packs" id="mo-hinh-nhuong-quyen">
+  <div class="container">
+    <div class="section-head" style="text-align:center;margin:0 auto 40px">
+      <div class="eyebrow">Mô hình nhượng quyền</div>
+      <h2 class="section-title">3 mô hình nhượng quyền CAFEROA</h2>
+      <p>Chọn mô hình phù hợp với mặt bằng và ngân sách. CAFEROA đồng hành từ thiết kế, setup, đào tạo đến cung ứng nguyên liệu.</p>
+    </div>
+    <div class="pk-grid">
+      <article class="pk pk-express">
+        <div class="pk-img"><img src="img/nq-express.webp" alt="Mô hình quầy cà phê mang đi CAFEROA EXPRESS" width="800" height="910" loading="lazy"><span class="pk-badge">Khởi nghiệp gọn nhẹ</span></div>
+        <div class="pk-body">
+          <div class="pk-no">01</div>
+          <h3>CAFEROA EXPRESS</h3>
+          <div class="pk-sub">Quầy mang đi</div>
+          <ul><li>Quầy mang đi, diện tích nhỏ.</li><li>Menu cà phê chủ lực.</li><li>Đào tạo pha chế và cung ứng nguyên liệu.</li><li>Phù hợp người mới kinh doanh.</li></ul>
+          <a href="#franForm" class="btn btn-gold pk-btn" onclick="pickPack('CAFEROA EXPRESS')">Đăng ký Express</a>
+        </div>
+      </article>
+      <article class="pk pk-standard">
+        <div class="pk-img"><img src="img/nq-standard.webp" alt="Mô hình cửa hàng cà phê CAFEROA STANDARD" width="624" height="492" loading="lazy"><span class="pk-badge">Phổ biến nhất</span></div>
+        <div class="pk-body">
+          <div class="pk-no">02</div>
+          <h3>CAFEROA STANDARD</h3>
+          <div class="pk-sub">Cửa hàng quy mô vừa</div>
+          <ul><li>Cửa hàng cà phê quy mô vừa.</li><li>Menu phin, espresso và đồ uống đặc trưng.</li><li>Bộ nhận diện, setup, đào tạo nhân sự.</li><li>Hỗ trợ khai trương và marketing.</li></ul>
+          <a href="#franForm" class="btn btn-gold pk-btn" onclick="pickPack('CAFEROA STANDARD')">Đăng ký Standard</a>
+        </div>
+      </article>
+      <article class="pk pk-premium">
+        <div class="pk-img"><img src="img/nq-premium.webp" alt="Mô hình quầy bar cà phê cao cấp CAFEROA PREMIUM" width="1024" height="1025" loading="lazy"><span class="pk-badge">Đẳng cấp thương hiệu</span></div>
+        <div class="pk-body">
+          <div class="pk-no">03</div>
+          <h3>CAFEROA PREMIUM</h3>
+          <div class="pk-sub">Cửa hàng trải nghiệm cao cấp</div>
+          <ul><li>Cửa hàng trải nghiệm cao cấp.</li><li>Không gian thương hiệu và quà tặng cà phê.</li><li>Menu chuyên sâu, cà phê đặc sản.</li><li>Hỗ trợ vận hành và phát triển thị trường.</li></ul>
+          <a href="#franForm" class="btn btn-gold pk-btn" onclick="pickPack('CAFEROA PREMIUM')">Đăng ký Premium</a>
+        </div>
+      </article>
+    </div>
+    <p class="note-sm" style="text-align:center;margin-top:18px">Hình ảnh mang tính minh họa mô hình. Chi phí và điều kiện mỗi gói 2 bên thỏa thuận theo mặt bằng và nhu cầu.</p>
+  </div>
+</section>
+
 <!-- FRANCHISE -->
 <section class="section ws" id="nhuong-quyen">
   <div class="container franchise">
@@ -867,6 +934,7 @@ footer .copy{border-top:1px solid rgba(216,173,95,.18);margin-top:40px;padding-t
         <h3>Form đăng ký nhượng quyền</h3>
         <div class="form-row"><label>Họ tên *</label><input name="name"><div class="err">Vui lòng nhập họ tên</div></div>
         <div class="form-row"><label>Số điện thoại / Zalo *</label><input name="phone" inputmode="tel"><div class="err">Số điện thoại chưa đúng</div></div>
+        <div class="form-row"><label>Mô hình quan tâm</label><select name="pack"><option>CAFEROA EXPRESS – Quầy mang đi</option><option>CAFEROA STANDARD – Cửa hàng quy mô vừa</option><option>CAFEROA PREMIUM – Cửa hàng cao cấp</option><option>Chưa chọn, cần tư vấn</option></select></div>
         <div class="form-row"><label>Khu vực dự kiến mở quán</label><input name="area" placeholder="Tỉnh/thành, quận/huyện"></div>
         <div class="form-row"><label>Mặt bằng</label><select name="space"><option>Đã có mặt bằng</option><option>Đang tìm</option></select></div>
         <div class="form-row"><label>Ngân sách dự kiến</label><select name="budget"><option>Dưới 200 triệu</option><option>200–500 triệu</option><option>Trên 500 triệu</option></select></div>
@@ -895,7 +963,8 @@ footer .copy{border-top:1px solid rgba(216,173,95,.18);margin-top:40px;padding-t
           <li><a href="#gia-si">Giá sỉ cà phê cho quán</a></li>
           <li><a href="#gia-si">Cà phê Robusta giá sỉ</a></li>
           <li><a href="#gia-si">Cà phê Arabica giá sỉ</a></li>
-          <li><a href="#nhuong-quyen">Nhượng quyền CAFEROA</a></li>
+          <li><a href="#mo-hinh-nhuong-quyen">Mô hình nhượng quyền</a></li>
+          <li><a href="#nhuong-quyen">Đăng ký nhượng quyền</a></li>
         </ul>
       </div>
       <div>
@@ -1614,13 +1683,14 @@ function injectJsonLd(){
   if(PAGE==='home') add({'@context':'https://schema.org','@type':'ItemList','name':'Giá bán lẻ Tubat Coffee tại CAFEROA','itemListElement':PRODUCTS.map((p,i)=>({'@type':'ListItem','position':i+1,'item':{'@type':'Product','name':'Cà phê Tubat '+p.name+' '+p.size,'image':p.schemaImg||p.img,'description':p.short,'brand':{'@type':'Brand','name':'Tubat Coffee'},...(p.price?{'offers':{'@type':'Offer','price':p.price,'priceCurrency':'VND','availability':'https://schema.org/InStock','seller':{'@type':'Organization','name':'CAFEROA'}}}:{})}}))});
   if(document.querySelector('.faq details')) add({'@context':'https://schema.org','@type':'FAQPage','mainEntity':[...document.querySelectorAll('.faq details')].map(d=>({'@type':'Question','name':d.querySelector('summary').textContent.trim(),'acceptedAnswer':{'@type':'Answer','text':d.querySelector('p').textContent.trim()}}))});
 }
+function pickPack(name){ const sel=document.querySelector('#franForm [name=pack]'); if(sel){ [...sel.options].forEach(o=>{ if(o.text.startsWith(name)) sel.value=o.value; }); } }
 function submitLead(formId, title){
   const f = document.getElementById(formId); const d = Object.fromEntries(new FormData(f)); let ok = true;
   const phone = (d.phone||'').replace(/[\s.\-]/g,'');
   const chk = (n,c)=>{ const r=f.querySelector(`[name=${n}]`).closest('.form-row'); r.classList.toggle('invalid',!c); if(!c) ok=false; };
   chk('name',(d.name||'').trim().length>=2); chk('phone',/^(0|\+84)(3|5|7|8|9)\d{8}$/.test(phone));
   if(!ok) return;
-  const labels={type:'Loại cà phê',vol:'Sản lượng/tháng',shop:'Quán, khu vực',area:'Khu vực mở quán',space:'Mặt bằng',budget:'Ngân sách'};
+  const labels={pack:'Mô hình',type:'Loại cà phê',vol:'Sản lượng/tháng',shop:'Quán, khu vực',area:'Khu vực mở quán',space:'Mặt bằng',budget:'Ngân sách'};
   const text = `${title} – CAFEROA\nHọ tên: ${d.name}\nSĐT: ${phone}\n` + Object.keys(labels).filter(k=>d[k]).map(k=>`${labels[k]}: ${d[k]}`).join('\n');
   const fields = {'Loại yêu cầu':title, 'Họ tên':d.name, 'SĐT':phone};
   Object.keys(labels).filter(k=>d[k]).forEach(k=>fields[labels[k]]=d[k]);
