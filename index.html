@@ -310,6 +310,14 @@ footer .copy{border-top:1px solid rgba(216,173,95,.18);margin-top:40px;padding-t
 .price-table th{background:var(--roast);color:#fff;font-weight:600;font-size:.88rem}
 .price-table td.p{font-weight:700;color:var(--red);white-space:nowrap}
 .price-table tr:last-child td{border-bottom:0}
+#tierTable{table-layout:fixed}
+#tierTable th:nth-child(1),#tierTable td:nth-child(1){width:34%}
+#tierTable th:nth-child(2),#tierTable td:nth-child(2){width:24%;text-align:center}
+#tierTable th:nth-child(3),#tierTable td:nth-child(3){width:42%}
+#tierTable td{vertical-align:middle}
+#tierTable td:nth-child(1) b{white-space:nowrap}
+#tierTable td.p{font-size:1.05rem}
+@media (max-width:640px){#tierTable th,#tierTable td{padding:11px 10px;font-size:.88rem}#tierTable th{font-size:.8rem;line-height:1.3}}
 .price-table tr.grp td{background:var(--paper-2);color:var(--bean);font-weight:700;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;padding:10px 16px}
 .price-table .mini{padding:.4rem .8rem;font-size:.8rem}
 .table-wrap{overflow-x:auto;border-radius:var(--radius)}
@@ -844,7 +852,7 @@ footer .copy{border-top:1px solid rgba(216,173,95,.18);margin-top:40px;padding-t
         <div class="form-row"><label>Họ tên *</label><input name="name"><div class="err">Vui lòng nhập họ tên</div></div>
         <div class="form-row"><label>Số điện thoại / Zalo *</label><input name="phone" inputmode="tel"><div class="err">Số điện thoại chưa đúng</div></div>
         <div class="form-row"><label>Loại cà phê quan tâm</label><select name="type"><option>Robusta</option><option>Arabica</option><option>Phối trộn (Robusta + Arabica)</option><option>Chưa biết, cần tư vấn</option></select></div>
-        <div class="form-row"><label>Sản lượng dự kiến / tháng</label><select name="vol"><option>5–10 kg</option><option>10–30 kg</option><option>30–100 kg</option><option>Trên 100 kg</option></select></div>
+        <div class="form-row"><label>Sản lượng dự kiến / tháng</label><select name="vol"><option>1–4 kg</option><option>5–9 kg</option><option>10–19 kg</option><option>20–49 kg</option><option>50–99 kg</option><option>100–199 kg</option><option>Từ 200 kg</option></select></div>
         <div class="form-row"><label>Tên quán, khu vực</label><input name="shop" placeholder="VD: Quán A, Gò Vấp"></div>
         <button type="button" class="btn btn-gold" style="width:100%" onclick="submitLead('quoteForm','YÊU CẦU BÁO GIÁ SỈ')">Gửi yêu cầu báo giá</button>
       </form>
@@ -1063,10 +1071,13 @@ const SHOP = {
 };
 /* Bậc giá sỉ (chiết khấu trên giá lẻ) — GIÁ TRỊ TẠM, chỉnh theo chính sách thật */
 const WHOLESALE_TIERS = [
-  ['5 – 10 kg/tháng', 10, 'Quán nhỏ, xe cà phê mang đi'],
-  ['10 – 30 kg/tháng', 15, 'Quán vừa, giao định kỳ hằng tuần'],
-  ['30 – 100 kg/tháng', 20, 'Chuỗi nhỏ, quán đông khách'],
-  ['Trên 100 kg/tháng', null, 'Báo giá riêng theo hợp đồng']
+  ['1 – 4 kg', 0, 'Khách mua lẻ'],
+  ['5 – 9 kg', 5, 'Quán nhỏ, xe cà phê'],
+  ['10 – 19 kg', 8, 'Quán mới hoạt động'],
+  ['20 – 49 kg', 12, 'Quán kinh doanh ổn định'],
+  ['50 – 99 kg', 15, 'Quán có sản lượng khá'],
+  ['100 – 199 kg', 18, 'Đối tác đại lý'],
+  ['Từ 200 kg', 20, 'Đại lý chiến lược']
 ];
 const IMG = 'https://tubatcoffee.com/wp-content/uploads/2026/07/';
 const PIMG = {
@@ -1635,7 +1646,7 @@ function reply(raw){
   if(has('nhuong quyen','franchise','mo quan tubat')){ setTimeout(()=>{closeChatOnMobile();goTo('nhuong-quyen');},1600); return botSay('Bạn đăng ký <b>nhượng quyền CAFEROA</b> qua form ở mục <b>"Đăng ký nhượng quyền"</b> (mình đang chuyển bạn tới đó). CAFEROA tư vấn trực tiếp tận nơi, khảo sát mặt bằng, lên phương án quán, đào tạo pha chế và cung cấp nguồn cà phê sạch. Điều kiện và chi phí 2 bên thỏa thuận theo nhu cầu.', MAIN_Q); }
   if(has('o dau','cho nao','noi nao','dai ly','mua le')) return botSay(`CAFEROA là <b>đại lý bán lẻ cà phê sạch chất lượng cao</b>, bán lẻ từ 1 gói:\n• Đặt ngay trên trang này (thanh toán khi nhận)\n• Nhắn Zalo <a href="${SHOP.zalo}" target="_blank" style="color:#0068ff;font-weight:600">${SHOP.phoneDisplay}</a>\n• Mua tại cửa hàng: ${SHOP.address}`, MAIN_Q);
   if(has('xuong rang','rang gia re','xuong')) return botSay('Cà phê tại CAFEROA được rang bằng công nghệ Hot Air, rang theo đơn, 100% cà phê không độn. CAFEROA phân phối trực tiếp nên giá sỉ cạnh tranh mà vẫn sạch.', ['Giá sỉ cho quán','Giá bán lẻ']);
-  if(has('gia si','mua si','quan nho','cho quan','so luong lon','qua tang','doanh nghiep','in logo','robusta si','arabica si','lay si','van phong')) { const tiers = WHOLESALE_TIERS.map(r=>`• ${r[0]}: ${r[1]?'giảm '+r[1]+'% giá lẻ':'báo giá riêng'}`).join('\n'); return botSay(`<b>Giá sỉ cà phê sạch cho quán &amp; văn phòng</b> (Robusta & Arabica):\n${tiers}\nQuán nhỏ nên dùng <b>Trust – Thanh Tao</b> hoặc <b>Hồn Hậu</b>.${pcard(byId('trust-tt'))}\n<a href="#baogia" style="color:var(--red);text-decoration:underline" onclick="closeChatOnMobile()">Gửi form nhận báo giá sỉ →</a>`, MAIN_Q); }
+  if(has('gia si','mua si','quan nho','cho quan','so luong lon','qua tang','doanh nghiep','in logo','robusta si','arabica si','lay si','van phong')) { const tiers = WHOLESALE_TIERS.map(r=>`• ${r[0]}/tháng: ${r[1]?'chiết khấu '+r[1]+'%':'giá lẻ'} – ${r[2]}`).join('\n'); return botSay(`<b>Giá sỉ cà phê sạch cho quán &amp; văn phòng</b> (Robusta & Arabica):\n${tiers}\nQuán nhỏ nên dùng <b>Trust – Thanh Tao</b> hoặc <b>Hồn Hậu</b>.${pcard(byId('trust-tt'))}\n<a href="#baogia" style="color:var(--red);text-decoration:underline" onclick="closeChatOnMobile()">Gửi form nhận báo giá sỉ →</a>`, MAIN_Q); }
   // specific products
   const found = PRODUCTS.filter(p => { const n = norm(p.name); return t.includes(n) || (p.id.startsWith('heritage') && t.includes(n.split(' ')[1]) && t.includes('heritage')) || (n.includes('–') && t.includes(norm(p.name.split('– ')[1]))); });
   if(found.length && !has('gia ca phe','thi truong')) { const p = found[0]; return botSay(`<b>${p.name}</b> – ${p.blend}\n${p.short}\nGiá: <b>${priceTxt(p)}</b> / ${p.size}\nHợp pha: ${p.brew}.${pcard(p)}`, ['Tư vấn chọn cà phê','Bảng giá','Cách đặt hàng']); }
@@ -1665,8 +1676,8 @@ function renderPriceTables(){
   $('#priceTable').innerHTML = `<thead><tr><th>Sản phẩm</th><th>Thành phần</th><th>Quy cách</th><th>Giá</th><th></th></tr></thead><tbody>` +
     ['Sản phẩm bán lẻ','Bán sỉ & nhượng quyền'].map(g=>`<tr class="grp"><td colspan="5">${g}</td></tr>`+PRODUCTS.filter(p=>groupOf(p)===g).map(p=>`<tr><td><b>${p.name}</b></td><td>${p.blend}</td><td>${p.size}</td><td class="p">${priceTxt(p)}</td><td><button class="btn btn-dark mini" onclick="addToCart('${p.id}')">${p.price?'Mua':'Báo giá sỉ'}</button></td></tr>`).join('')).join('') + '</tbody>';
   $('#priceUpdated').textContent = `Giá bán lẻ Tubat Coffee cập nhật ngày ${SHOP.priceUpdated}.`;
-  $('#tierTable').innerHTML = `<thead><tr><th>Sản lượng</th><th>Chiết khấu trên giá lẻ</th><th>Phù hợp</th></tr></thead><tbody>` +
-    WHOLESALE_TIERS.map(r=>`<tr><td><b>${r[0]}</b></td><td class="p">${r[1]?'Giảm '+r[1]+'%':'Báo giá riêng'}</td><td>${r[2]}</td></tr>`).join('') + '</tbody>';
+  $('#tierTable').innerHTML = `<thead><tr><th>Sản lượng/tháng</th><th>Chiết khấu đề xuất</th><th>Đối tượng</th></tr></thead><tbody>` +
+    WHOLESALE_TIERS.map(r=>`<tr><td><b>${r[0]}</b></td><td class="p">${r[1]?r[1]+'%':'0%'}</td><td>${r[2]}</td></tr>`).join('') + '</tbody>';
   const ps = PRODUCTS.filter(p=>p.price).map(p=>p.price);
   document.querySelectorAll('[data-minprice]').forEach(e=>e.textContent=vnd(Math.min(...ps)));
   document.querySelectorAll('[data-maxprice]').forEach(e=>e.textContent=vnd(Math.max(...ps)));
