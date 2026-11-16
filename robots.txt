@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://caferoa.com/sitemap.xml
