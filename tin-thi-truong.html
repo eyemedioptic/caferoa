@@ -629,7 +629,6 @@ footer .copy{border-top:1px solid rgba(216,173,95,.18);margin-top:40px;padding-t
       <button class="chip" data-cat="market">Giá & thị trường</button>
       <button class="chip" data-cat="kienthuc">Kiến thức</button>
       <button class="chip" data-cat="quan">Cho chủ quán</button>
-      <button class="chip" data-cat="tubat">Tin Tubat</button>
     </div>
     <div class="news-list" id="newsList"></div>
     <p class="disclaimer">Số liệu cập nhật lần cuối: 13/11/2026. Giá nội địa và giá sàn tổng hợp từ chocaphe.vn và báo chí; điểm ngày 13/11 lấy theo chocaphe.vn. Giá thay đổi hằng ngày; vui lòng đối chiếu nguồn gốc trước khi giao dịch.</p>
@@ -969,16 +968,6 @@ const NEWS = [
    body:`<p>Khách đông chưa chắc có lãi; doanh thu tăng nhờ bán nhiều đơn hơn hoặc nâng giá trị mỗi đơn. Bước đầu là tinh gọn menu, tập trung món chủ lực và thiết kế combo.</p>
    <p>Tiếp theo là chương trình khách thân thiết, mạng xã hội, cân nhắc chi phí khi bán qua app giao hàng, nâng chất lượng phục vụ, kiểm soát giá vốn và dùng phần mềm quản lý. Quán nhỏ nên làm tốt menu, khách cũ và phục vụ trước khi mở rộng.</p>`,
    src:'Chợ Cà Phê (chocaphe.vn)', url:'https://chocaphe.vn/cach-tang-doanh-thu-quan-ca-phe-9-chien-luoc-hieu-qua-chu-quan-nen-ap-dung.n179'},
-  {cat:'tubat', date:'26/10/2026', title:'TUBAT xuất khẩu chính ngạch 100kg Trust Chân Phương qua tuyến liên vận quốc tế mới',
-   sum:'Cột mốc đưa định vị "Modern Vietnamese Cultural Specialty Coffee" ra thị trường quốc tế.',
-   img:'img/n-bag-gourmet.webp',
-   body:`<p>Tubat Coffee xuất khẩu chính ngạch lô 100kg dòng Trust – Chân Phương qua tuyến liên vận đường sắt quốc tế mới, đưa định vị "Modern Vietnamese Cultural Specialty Coffee" ra thế giới.</p>`,
-   src:'Tubat Coffee', url:'https://tubatcoffee.com/elementor-605/'},
-  {cat:'tubat', date:'14/08/2026', title:'Thế nào là "Modern Vietnamese Cultural Specialty Coffee"?',
-   sum:'Giải mã định vị mới của TUBAT và cách nó thể hiện trên website, bao bì sản phẩm.',
-   img:'img/n-bag-blank.webp',
-   body:`<p>Định vị mới của Tubat: cà phê đặc sản mang bản sắc văn hóa Việt, kể bằng tinh thần hiện đại, hiện diện từ website đến bao bì.</p>`,
-   src:'Tubat Coffee', url:'https://tubatcoffee.com/the-nao-la-modern-vietnamese-cultural-specialty-coffee-loi-giai-ma-cho-dinh-vi-moi-cua-tubat/'}
 ];
 /* ---------- Helpers ---------- */
 function imgFallback(el){ if(el.dataset.fbkey && !el.dataset.fb && !el.dataset.used){ el.dataset.used=1; el.src = IMGS[el.dataset.fbkey]; return; }
@@ -1273,13 +1262,13 @@ function renderChart(){
   tip.textContent = `${s.label} · ${last[0]}: ${s.fmt(last[1])} ${s.unit}`;
   $('#chart').querySelectorAll('.pt').forEach(el => { const show = () => { const p = pts[+el.dataset.i]; tip.textContent = `${s.label} · ${p[0]}: ${s.fmt(p[1])} ${s.unit}`; }; el.addEventListener('mouseenter', show); el.addEventListener('click', show); });
 }
-const CATS = {kienthuc:'Kiến thức cà phê', market:'Giá & thị trường', quan:'Cho chủ quán', tubat:'Tin Tubat'};
+const CATS = {kienthuc:'Kiến thức cà phê', market:'Giá & thị trường', quan:'Cho chủ quán'};
 let newsCat = 'all';
 function goTo(id){ if(document.getElementById(id)) location.hash = id; else location.href = './#' + id; }
 const PAGE = document.body.dataset.page || 'home';
 function renderNews(){
   let list = NEWS.filter(n => newsCat==='all' || n.cat===newsCat);
-  if(PAGE==='home') list = NEWS.filter(n=>n.cat!=='tubat').slice(0,3);
+  if(PAGE==='home') list = NEWS.slice(0,3);
   $('#newsList').innerHTML = list.map(n => { const i = NEWS.indexOf(n); return `<article class="news" onclick="openNews(${i})">
     <div class="nimg">${n.img?`<div class="ph">☕ ${CATS[n.cat]}</div><img src="${n.img}" ${n.fb?`data-fb="${n.fb}"`:''} alt="${esc(n.title)}" loading="lazy" referrerpolicy="no-referrer" onerror="imgFallback(this)" style="position:absolute;inset:0">`:`<div class="ph">☕ ${CATS[n.cat]}<br><small style="font-size:.85rem;font-family:'Be Vietnam Pro';color:#cbbba5">${n.date}</small></div>`}</div>
     <div class="nb"><div class="meta">${CATS[n.cat]} · ${n.date}</div><h3>${n.title}</h3><p>${n.sum}</p><span class="more">Đọc tiếp →</span></div></article>`; }).join('');
