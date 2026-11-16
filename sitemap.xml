@@ -118,4 +118,13 @@
     <image:image><image:loc>https://caferoa.com/img/rang-nan-quat.webp</image:loc><image:title>Hạt cà phê từ nhân xanh đến rang đậm</image:title></image:image>
     <image:image><image:loc>https://caferoa.com/img/logo-r-header.webp</image:loc><image:title>CAFEROA Premium Coffee</image:title></image:image>
   </url>
+  <url>
+    <loc>https://caferoa.com/ca-phe-may-cho-van-phong.html</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image><image:loc>https://caferoa.com/img/may-2in1.webp</image:loc><image:title>Máy pha cà phê 2 trong 1 cho văn phòng</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/may-auto-12.webp</image:loc><image:title>Máy pha cà phê tự động từ hạt</image:title></image:image>
+    <image:image><image:loc>https://caferoa.com/img/may-auto-27.webp</image:loc><image:title>Máy pha cà phê tự động cao cấp</image:title></image:image>
+  </url>
 </urlset>
