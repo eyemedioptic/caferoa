@@ -309,7 +309,6 @@ footer .copy{border-top:1px solid rgba(216,173,95,.18);margin-top:40px;padding-t
 .price-table th,.price-table td{padding:13px 16px;text-align:left;border-bottom:1px solid var(--line)}
 .price-table th{background:var(--roast);color:#fff;font-weight:600;font-size:.88rem}
 .price-table td.p{font-weight:700;color:var(--red);white-space:nowrap}
-#tierTable td:first-child{white-space:nowrap}
 .price-table tr:last-child td{border-bottom:0}
 #tierTable{table-layout:fixed}
 #tierTable th:nth-child(1),#tierTable td:nth-child(1){width:34%}
@@ -853,7 +852,7 @@ footer .copy{border-top:1px solid rgba(216,173,95,.18);margin-top:40px;padding-t
         <div class="form-row"><label>Họ tên *</label><input name="name"><div class="err">Vui lòng nhập họ tên</div></div>
         <div class="form-row"><label>Số điện thoại / Zalo *</label><input name="phone" inputmode="tel"><div class="err">Số điện thoại chưa đúng</div></div>
         <div class="form-row"><label>Loại cà phê quan tâm</label><select name="type"><option>Robusta</option><option>Arabica</option><option>Phối trộn (Robusta + Arabica)</option><option>Chưa biết, cần tư vấn</option></select></div>
-        <div class="form-row"><label>Sản lượng dự kiến / tháng</label><select name="vol"><option>1–4 kg</option><option>5–9 kg</option><option>10–19 kg</option><option>20–49 kg</option><option>50–99 kg</option><option>100–199 kg</option><option>Từ 200 kg</option></select></div>
+        <div class="form-row"><label>Sản lượng dự kiến / tháng</label><select name="vol"><option>5–9 kg</option><option>10–19 kg</option><option>20–49 kg</option><option>50–99 kg</option><option>100–199 kg</option><option>Từ 200 kg</option></select></div>
         <div class="form-row"><label>Tên quán, khu vực</label><input name="shop" placeholder="VD: Quán A, Gò Vấp"></div>
         <button type="button" class="btn btn-gold" style="width:100%" onclick="submitLead('quoteForm','YÊU CẦU BÁO GIÁ SỈ')">Gửi yêu cầu báo giá</button>
       </form>
@@ -1072,12 +1071,12 @@ const SHOP = {
 };
 /* Bậc giá sỉ (chiết khấu trên giá lẻ) — GIÁ TRỊ TẠM, chỉnh theo chính sách thật */
 const WHOLESALE_TIERS = [
-  ['5 – 9 kg/tháng', 5, 'Quán nhỏ, xe cà phê'],
-  ['10 – 19 kg/tháng', 8, 'Quán mới hoạt động'],
-  ['20 – 49 kg/tháng', 12, 'Quán kinh doanh ổn định'],
-  ['50 – 99 kg/tháng', 15, 'Quán có sản lượng khá'],
-  ['100 – 199 kg/tháng', 18, 'Đối tác đại lý'],
-  ['Từ 200 kg/tháng', 20, 'Đại lý chiến lược']
+  ['5 – 9 kg', 5, 'Quán nhỏ, xe cà phê'],
+  ['10 – 19 kg', 8, 'Quán mới hoạt động'],
+  ['20 – 49 kg', 12, 'Quán kinh doanh ổn định'],
+  ['50 – 99 kg', 15, 'Quán có sản lượng khá'],
+  ['100 – 199 kg', 18, 'Đối tác đại lý'],
+  ['Từ 200 kg', 20, 'Đại lý chiến lược']
 ];
 const IMG = 'https://tubatcoffee.com/wp-content/uploads/2026/07/';
 const PIMG = {
