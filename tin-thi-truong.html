@@ -301,6 +301,7 @@ footer .copy{border-top:1px solid rgba(216,173,95,.18);margin-top:40px;padding-t
 .price-table th,.price-table td{padding:13px 16px;text-align:left;border-bottom:1px solid var(--line)}
 .price-table th{background:var(--roast);color:#fff;font-weight:600;font-size:.88rem}
 .price-table td.p{font-weight:700;color:var(--red);white-space:nowrap}
+#tierTable td:first-child{white-space:nowrap}
 .price-table tr:last-child td{border-bottom:0}
 #tierTable{table-layout:fixed}
 #tierTable th:nth-child(1),#tierTable td:nth-child(1){width:34%}
@@ -778,13 +779,12 @@ const SHOP = {
 };
 /* Bậc giá sỉ (chiết khấu trên giá lẻ) — GIÁ TRỊ TẠM, chỉnh theo chính sách thật */
 const WHOLESALE_TIERS = [
-  ['1 – 4 kg', 0, 'Khách mua lẻ'],
-  ['5 – 9 kg', 5, 'Quán nhỏ, xe cà phê'],
-  ['10 – 19 kg', 8, 'Quán mới hoạt động'],
-  ['20 – 49 kg', 12, 'Quán kinh doanh ổn định'],
-  ['50 – 99 kg', 15, 'Quán có sản lượng khá'],
-  ['100 – 199 kg', 18, 'Đối tác đại lý'],
-  ['Từ 200 kg', 20, 'Đại lý chiến lược']
+  ['5 – 9 kg/tháng', 5, 'Quán nhỏ, xe cà phê'],
+  ['10 – 19 kg/tháng', 8, 'Quán mới hoạt động'],
+  ['20 – 49 kg/tháng', 12, 'Quán kinh doanh ổn định'],
+  ['50 – 99 kg/tháng', 15, 'Quán có sản lượng khá'],
+  ['100 – 199 kg/tháng', 18, 'Đối tác đại lý'],
+  ['Từ 200 kg/tháng', 20, 'Đại lý chiến lược']
 ];
 const IMG = 'https://tubatcoffee.com/wp-content/uploads/2026/07/';
 const PIMG = {
